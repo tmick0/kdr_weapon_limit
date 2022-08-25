@@ -1,0 +1,22 @@
+project:
+  sourceknight: 0.1
+  name: kdr_weapon_limit
+  dependencies:
+    - name: sourcemod
+      type: tar
+      version: 1.10.0-git6528
+      location: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6528-linux.tar.gz
+      unpack:
+      - source: /addons
+        dest: /addons
+    - name: sm-resources
+      type: git
+      repo: https://github.com/Bara/sourcemod-resources
+      unpack:
+      - source: /sourcemod-colors.inc
+        dest: /addons/sourcemod/scripting/include/colors.inc
+      
+  root: /
+  output: /addons/sourcemod/plugins
+  targets:
+    - kdr_weapon_limit
